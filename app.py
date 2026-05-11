@@ -22,12 +22,14 @@ def load_data():
         with open('full_temperature_data.json', 'r') as f:
             return json.load(f)
     except FileNotFoundError:
-        # Fallback caso o arquivo não exista
         return {
             "Brazil": {"iso": "BRA", "city": "São Paulo", "max": 35.0, "max_date": "2025-01-01", "min": 15.0, "min_date": "2025-07-01"}
         }
 
 TEMPERATURE_DATA = load_data()
+
+# Mapeamento de ISO para Nome do País para facilitar a busca no clique
+ISO_TO_NAME = {v['iso']: k for k, v in TEMPERATURE_DATA.items()}
 
 # ============================================================================
 # CSS PERSONALIZADO (ESTILO COVID VISUALIZER)
@@ -63,6 +65,7 @@ st.markdown("""
         border: 1px solid rgba(46, 204, 113, 0.2);
         width: 320px;
         box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        pointer-events: none; /* Permite clicar através do card se necessário */
     }
     
     .country-header {
@@ -145,14 +148,14 @@ st.markdown("""
         margin-top: 5px;
         opacity: 0.7;
     }
-    
-    /* Custom Sidebar */
-    [data-testid="stSidebar"] {
-        background-color: #0a0a0a;
-        border-right: 1px solid #1a1a1a;
-    }
 </style>
 """, unsafe_allow_html=True)
+
+# ============================================================================
+# ESTADO DA SESSÃO PARA CLIQUE
+# ============================================================================
+if 'selected_country' not in st.session_state:
+    st.session_state.selected_country = "Brazil"
 
 # ============================================================================
 # INTERFACE
@@ -166,24 +169,17 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Sidebar para seleção
-with st.sidebar:
-    st.markdown("<h2 style='color:#2ecc71; font-size:18px;'>PAÍSES</h2>", unsafe_allow_html=True)
-    country_list = sorted(list(TEMPERATURE_DATA.keys()))
-    default_idx = country_list.index("Brazil") if "Brazil" in country_list else 0
-    selected_country = st.selectbox("Selecione para ver detalhes:", options=country_list, index=default_idx)
-
 # Dados do país selecionado
-c_data = TEMPERATURE_DATA[selected_country]
+c_data = TEMPERATURE_DATA.get(st.session_state.selected_country, TEMPERATURE_DATA["Brazil"])
 flag_code = c_data['iso'].lower()[:2]
 flag_url = f"https://flagcdn.com/w80/{flag_code}.png"
 
-# Card de Informações (Overlay)
+# Card de Informações (Overlay) - Renderizado com st.markdown para garantir o HTML
 st.markdown(f"""
 <div class="info-overlay">
     <div class="country-header">
         <img src="{flag_url}" width="35" style="border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-        <span class="country-name">{selected_country}</span>
+        <span class="country-name">{st.session_state.selected_country}</span>
     </div>
     <div class="city-info">Cidade Referência: <b>{c_data['city']}</b></div>
     
@@ -226,6 +222,7 @@ fig = go.Figure(go.Choropleth(
     marker_line_color='rgba(255,255,255,0.15)',
     marker_line_width=0.5,
     hoverinfo='text',
+    customdata=df_map['name'] # Passar o nome do país para o evento de clique
 ))
 
 fig.update_geos(
@@ -246,15 +243,26 @@ fig.update_layout(
     margin={"r":0,"t":0,"l":0,"b":0},
     paper_bgcolor="#050505",
     plot_bgcolor="#050505",
-    # Removido dragmode="rotate" que causava erro em algumas versões do Plotly
+    clickmode='event+select' # Habilitar eventos de clique
 )
 
-# Renderizar o mapa
-st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+# Renderizar o mapa e capturar eventos de clique
+# Nota: No Streamlit nativo, usamos st.plotly_chart. 
+# Para capturar o clique, usamos o componente nativo que retorna a seleção se configurado.
+event = st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False}, on_select="rerun")
+
+# Lógica de Clique: Se o usuário clicar em um país, atualizamos o estado
+if event and "selection" in event and "points" in event["selection"] and len(event["selection"]["points"]) > 0:
+    point = event["selection"]["points"][0]
+    # O nome do país está no campo 'text' ou 'customdata'
+    clicked_country = point.get("text", st.session_state.selected_country)
+    if clicked_country in TEMPERATURE_DATA:
+        st.session_state.selected_country = clicked_country
+        st.rerun()
 
 # Instrução no rodapé
 st.markdown("""
 <div style="position: fixed; bottom: 30px; width: 100%; text-align: center; color: rgba(255,255,255,0.2); font-size: 11px; letter-spacing: 2px; pointer-events: none;">
-    CLIQUE E ARRASTE PARA EXPLORAR O GLOBO • USE O MENU LATERAL PARA DETALHES
+    CLIQUE EM UM PAÍS PARA VER DETALHES • ARRASTE PARA GIRAR O GLOBO
 </div>
 """, unsafe_allow_html=True)
