@@ -1,0 +1,1 @@
+# earth-max-min-temp-history
