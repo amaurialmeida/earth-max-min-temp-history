@@ -34,7 +34,7 @@ def get_historical_weather(year):
 st.set_page_config(page_title="Earth Max-Min Temp History", layout="wide")
 st.title("🌍 Earth Max-Min Temp History")
 
-# Lista de cidades (mantida como no seu código original)
+# Dados de cidades (mantidos como no original)
 cities = {
     "São Paulo": {"lat": -23.55, "lon": -46.63, "country_code": "BR"},
     "New York": {"lat": 40.71, "lon": -74.01, "country_code": "US"},
@@ -57,7 +57,8 @@ layer = pdk.Layer(
 deck = pdk.Deck(
     layers=[layer],
     initial_view_state=view_state,
-    map_style=None,
+    map_style="mapbox://styles/mapbox/light-v9",
+    tooltip={"text": "{city}"}
 )
 
 st.pydeck_chart(deck)
