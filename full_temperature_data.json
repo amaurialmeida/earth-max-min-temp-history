@@ -1,0 +1,1554 @@
+{
+    "Afghanistan": {
+        "iso": "AFG",
+        "city": "Kabul",
+        "max": 37.6,
+        "max_date": "2025-05-03",
+        "min": 19.8,
+        "min_date": "2025-06-05"
+    },
+    "Albania": {
+        "iso": "ALB",
+        "city": "Tirana",
+        "max": 29.6,
+        "max_date": "2025-07-20",
+        "min": 1.6,
+        "min_date": "2025-04-08"
+    },
+    "Algeria": {
+        "iso": "DZA",
+        "city": "Algiers",
+        "max": 25.3,
+        "max_date": "2025-02-16",
+        "min": 10.3,
+        "min_date": "2025-03-04"
+    },
+    "Andorra": {
+        "iso": "AND",
+        "city": "Andorra la Vella",
+        "max": 20.0,
+        "max_date": "2025-05-19",
+        "min": 9.8,
+        "min_date": "2025-01-08"
+    },
+    "Angola": {
+        "iso": "AGO",
+        "city": "Luanda",
+        "max": 22.3,
+        "max_date": "2025-09-13",
+        "min": 18.2,
+        "min_date": "2025-03-06"
+    },
+    "Antigua and Barbuda": {
+        "iso": "ATG",
+        "city": "St. John's",
+        "max": 31.4,
+        "max_date": "2025-10-29",
+        "min": -12.7,
+        "min_date": "2025-06-20"
+    },
+    "Argentina": {
+        "iso": "ARG",
+        "city": "Buenos Aires",
+        "max": 31.7,
+        "max_date": "2025-09-12",
+        "min": 13.2,
+        "min_date": "2025-12-04"
+    },
+    "Armenia": {
+        "iso": "ARM",
+        "city": "Yerevan",
+        "max": 20.6,
+        "max_date": "2025-10-17",
+        "min": 10.1,
+        "min_date": "2025-04-21"
+    },
+    "Australia": {
+        "iso": "AUS",
+        "city": "Sydney",
+        "max": 35.7,
+        "max_date": "2025-03-02",
+        "min": 10.0,
+        "min_date": "2025-11-11"
+    },
+    "Austria": {
+        "iso": "AUT",
+        "city": "Vienna",
+        "max": 34.1,
+        "max_date": "2025-11-01",
+        "min": -3.2,
+        "min_date": "2025-10-05"
+    },
+    "Azerbaijan": {
+        "iso": "AZE",
+        "city": "Baku",
+        "max": 21.0,
+        "max_date": "2025-03-16",
+        "min": 1.9,
+        "min_date": "2025-03-13"
+    },
+    "Bahamas": {
+        "iso": "BHS",
+        "city": "Nassau",
+        "max": 21.3,
+        "max_date": "2025-09-03",
+        "min": -5.3,
+        "min_date": "2025-08-27"
+    },
+    "Bahrain": {
+        "iso": "BHR",
+        "city": "Manama",
+        "max": 38.8,
+        "max_date": "2025-01-16",
+        "min": 8.9,
+        "min_date": "2025-09-02"
+    },
+    "Bangladesh": {
+        "iso": "BGD",
+        "city": "Dhaka",
+        "max": 29.1,
+        "max_date": "2025-05-20",
+        "min": -6.9,
+        "min_date": "2025-11-29"
+    },
+    "Barbados": {
+        "iso": "BRB",
+        "city": "Bridgetown",
+        "max": 25.0,
+        "max_date": "2025-06-25",
+        "min": -7.0,
+        "min_date": "2025-07-27"
+    },
+    "Belarus": {
+        "iso": "BLR",
+        "city": "Minsk",
+        "max": 29.2,
+        "max_date": "2025-06-09",
+        "min": 3.1,
+        "min_date": "2025-11-19"
+    },
+    "Belgium": {
+        "iso": "BEL",
+        "city": "Brussels",
+        "max": 29.6,
+        "max_date": "2025-03-29",
+        "min": 17.8,
+        "min_date": "2025-04-04"
+    },
+    "Belize": {
+        "iso": "BLZ",
+        "city": "Belize City",
+        "max": 27.0,
+        "max_date": "2025-09-20",
+        "min": 3.0,
+        "min_date": "2025-10-09"
+    },
+    "Benin": {
+        "iso": "BEN",
+        "city": "Cotonou",
+        "max": 47.9,
+        "max_date": "2025-01-09",
+        "min": 21.2,
+        "min_date": "2025-06-16"
+    },
+    "Bhutan": {
+        "iso": "BTN",
+        "city": "Thimphu",
+        "max": 25.3,
+        "max_date": "2025-07-25",
+        "min": -0.6,
+        "min_date": "2025-11-16"
+    },
+    "Bolivia": {
+        "iso": "BOL",
+        "city": "Santa Cruz de la Sierra",
+        "max": 28.7,
+        "max_date": "2025-09-24",
+        "min": 12.3,
+        "min_date": "2025-09-26"
+    },
+    "Bosnia and Herzegovina": {
+        "iso": "BIH",
+        "city": "Sarajevo",
+        "max": 34.7,
+        "max_date": "2025-10-01",
+        "min": 9.2,
+        "min_date": "2025-01-16"
+    },
+    "Botswana": {
+        "iso": "BWA",
+        "city": "Gaborone",
+        "max": 37.8,
+        "max_date": "2025-10-16",
+        "min": -5.2,
+        "min_date": "2025-01-28"
+    },
+    "Brazil": {
+        "iso": "BRA",
+        "city": "S\u00e3o Paulo",
+        "max": 22.9,
+        "max_date": "2025-01-27",
+        "min": -0.2,
+        "min_date": "2025-06-06"
+    },
+    "Brunei": {
+        "iso": "BRN",
+        "city": "Bandar Seri Begawan",
+        "max": 31.9,
+        "max_date": "2025-05-13",
+        "min": 23.1,
+        "min_date": "2025-08-31"
+    },
+    "Bulgaria": {
+        "iso": "BGR",
+        "city": "Sofia",
+        "max": 29.8,
+        "max_date": "2025-04-08",
+        "min": -7.9,
+        "min_date": "2025-03-14"
+    },
+    "Burkina Faso": {
+        "iso": "BFA",
+        "city": "Ouagadougou",
+        "max": 37.1,
+        "max_date": "2025-11-04",
+        "min": 12.4,
+        "min_date": "2025-07-14"
+    },
+    "Burundi": {
+        "iso": "BDI",
+        "city": "Bujumbura",
+        "max": 45.5,
+        "max_date": "2025-10-20",
+        "min": -11.7,
+        "min_date": "2025-08-21"
+    },
+    "Cabo Verde": {
+        "iso": "CPV",
+        "city": "Praia",
+        "max": 47.0,
+        "max_date": "2025-03-20",
+        "min": -2.7,
+        "min_date": "2025-07-08"
+    },
+    "Cambodia": {
+        "iso": "KHM",
+        "city": "Phnom Penh",
+        "max": 43.7,
+        "max_date": "2025-12-01",
+        "min": 4.9,
+        "min_date": "2025-08-18"
+    },
+    "Cameroon": {
+        "iso": "CMR",
+        "city": "Douala",
+        "max": 42.1,
+        "max_date": "2025-06-04",
+        "min": 23.2,
+        "min_date": "2025-03-26"
+    },
+    "Canada": {
+        "iso": "CAN",
+        "city": "Toronto",
+        "max": 34.2,
+        "max_date": "2025-04-22",
+        "min": -14.2,
+        "min_date": "2025-01-27"
+    },
+    "Central African Republic": {
+        "iso": "CAF",
+        "city": "Bangui",
+        "max": 41.1,
+        "max_date": "2025-12-01",
+        "min": -1.5,
+        "min_date": "2025-01-06"
+    },
+    "Chad": {
+        "iso": "TCD",
+        "city": "N'Djamena",
+        "max": 39.8,
+        "max_date": "2025-04-30",
+        "min": 14.2,
+        "min_date": "2025-05-18"
+    },
+    "Chile": {
+        "iso": "CHL",
+        "city": "Santiago",
+        "max": 29.1,
+        "max_date": "2025-05-07",
+        "min": -9.6,
+        "min_date": "2025-05-12"
+    },
+    "China": {
+        "iso": "CHN",
+        "city": "Shanghai",
+        "max": 39.6,
+        "max_date": "2025-04-01",
+        "min": 1.1,
+        "min_date": "2025-08-17"
+    },
+    "Colombia": {
+        "iso": "COL",
+        "city": "Bogot\u00e1",
+        "max": 33.4,
+        "max_date": "2025-02-27",
+        "min": 6.4,
+        "min_date": "2025-02-13"
+    },
+    "Comoros": {
+        "iso": "COM",
+        "city": "Moroni",
+        "max": 36.3,
+        "max_date": "2025-01-09",
+        "min": 23.0,
+        "min_date": "2025-09-07"
+    },
+    "Congo (Congo-Brazzaville)": {
+        "iso": "COG",
+        "city": "Brazzaville",
+        "max": 26.7,
+        "max_date": "2025-05-05",
+        "min": 8.7,
+        "min_date": "2025-07-08"
+    },
+    "Congo (Democratic Republic)": {
+        "iso": "COD",
+        "city": "Kinshasa",
+        "max": 36.2,
+        "max_date": "2025-08-30",
+        "min": 14.8,
+        "min_date": "2025-04-24"
+    },
+    "Costa Rica": {
+        "iso": "CRI",
+        "city": "San Jos\u00e9",
+        "max": 39.3,
+        "max_date": "2025-01-21",
+        "min": -0.8,
+        "min_date": "2025-12-24"
+    },
+    "Croatia": {
+        "iso": "HRV",
+        "city": "Zagreb",
+        "max": 46.5,
+        "max_date": "2025-11-05",
+        "min": -0.6,
+        "min_date": "2025-01-24"
+    },
+    "Cuba": {
+        "iso": "CUB",
+        "city": "Havana",
+        "max": 33.7,
+        "max_date": "2025-06-11",
+        "min": -9.1,
+        "min_date": "2025-01-20"
+    },
+    "Cyprus": {
+        "iso": "CYP",
+        "city": "Nicosia",
+        "max": 40.8,
+        "max_date": "2025-02-24",
+        "min": 12.7,
+        "min_date": "2025-01-06"
+    },
+    "Czechia (Czech Republic)": {
+        "iso": "CZE",
+        "city": "Prague",
+        "max": 36.8,
+        "max_date": "2025-09-01",
+        "min": 4.0,
+        "min_date": "2025-08-29"
+    },
+    "Denmark": {
+        "iso": "DNK",
+        "city": "Copenhagen",
+        "max": 20.6,
+        "max_date": "2025-06-21",
+        "min": 13.2,
+        "min_date": "2025-11-08"
+    },
+    "Djibouti": {
+        "iso": "DJI",
+        "city": "Djibouti City",
+        "max": 39.0,
+        "max_date": "2025-07-07",
+        "min": 10.8,
+        "min_date": "2025-04-24"
+    },
+    "Dominica": {
+        "iso": "DMA",
+        "city": "Roseau",
+        "max": 29.1,
+        "max_date": "2025-07-27",
+        "min": -13.5,
+        "min_date": "2025-07-23"
+    },
+    "Dominican Republic": {
+        "iso": "DOM",
+        "city": "Santo Domingo",
+        "max": 32.2,
+        "max_date": "2025-07-29",
+        "min": 6.4,
+        "min_date": "2025-07-04"
+    },
+    "Ecuador": {
+        "iso": "ECU",
+        "city": "Guayaquil",
+        "max": 29.3,
+        "max_date": "2025-02-05",
+        "min": -1.5,
+        "min_date": "2025-05-31"
+    },
+    "Egypt": {
+        "iso": "EGY",
+        "city": "Cairo",
+        "max": 26.8,
+        "max_date": "2025-07-29",
+        "min": 15.5,
+        "min_date": "2025-04-14"
+    },
+    "El Salvador": {
+        "iso": "SLV",
+        "city": "San Salvador",
+        "max": 22.2,
+        "max_date": "2025-01-24",
+        "min": 3.1,
+        "min_date": "2025-09-25"
+    },
+    "Equatorial Guinea": {
+        "iso": "GNQ",
+        "city": "Malabo",
+        "max": 37.0,
+        "max_date": "2025-04-28",
+        "min": 0.5,
+        "min_date": "2025-05-06"
+    },
+    "Eritrea": {
+        "iso": "ERI",
+        "city": "Asmara",
+        "max": 29.3,
+        "max_date": "2025-11-25",
+        "min": -5.4,
+        "min_date": "2025-12-30"
+    },
+    "Estonia": {
+        "iso": "EST",
+        "city": "Tallinn",
+        "max": 33.8,
+        "max_date": "2025-03-31",
+        "min": 9.0,
+        "min_date": "2025-06-26"
+    },
+    "Eswatini": {
+        "iso": "SWZ",
+        "city": "Manzini",
+        "max": 43.7,
+        "max_date": "2025-02-27",
+        "min": 6.2,
+        "min_date": "2025-05-19"
+    },
+    "Ethiopia": {
+        "iso": "ETH",
+        "city": "Addis Ababa",
+        "max": 33.3,
+        "max_date": "2025-04-06",
+        "min": 17.9,
+        "min_date": "2025-05-06"
+    },
+    "Fiji": {
+        "iso": "FJI",
+        "city": "Suva",
+        "max": 25.5,
+        "max_date": "2025-05-17",
+        "min": -3.4,
+        "min_date": "2025-03-24"
+    },
+    "Finland": {
+        "iso": "FIN",
+        "city": "Helsinki",
+        "max": 25.6,
+        "max_date": "2025-09-26",
+        "min": 10.4,
+        "min_date": "2025-10-19"
+    },
+    "France": {
+        "iso": "FRA",
+        "city": "Paris",
+        "max": 45.9,
+        "max_date": "2025-09-24",
+        "min": 16.4,
+        "min_date": "2025-09-24"
+    },
+    "Gabon": {
+        "iso": "GAB",
+        "city": "Libreville",
+        "max": 40.8,
+        "max_date": "2025-01-13",
+        "min": 3.6,
+        "min_date": "2025-08-03"
+    },
+    "Gambia": {
+        "iso": "GMB",
+        "city": "Serekunda",
+        "max": 24.8,
+        "max_date": "2025-10-13",
+        "min": -8.7,
+        "min_date": "2025-05-13"
+    },
+    "Georgia": {
+        "iso": "GEO",
+        "city": "Tbilisi",
+        "max": 40.5,
+        "max_date": "2025-03-12",
+        "min": -4.1,
+        "min_date": "2025-11-27"
+    },
+    "Germany": {
+        "iso": "DEU",
+        "city": "Berlin",
+        "max": 35.4,
+        "max_date": "2025-08-24",
+        "min": 0.8,
+        "min_date": "2025-11-26"
+    },
+    "Ghana": {
+        "iso": "GHA",
+        "city": "Accra",
+        "max": 37.9,
+        "max_date": "2025-09-10",
+        "min": 1.9,
+        "min_date": "2025-05-17"
+    },
+    "Greece": {
+        "iso": "GRC",
+        "city": "Athens",
+        "max": 24.9,
+        "max_date": "2025-09-17",
+        "min": -13.4,
+        "min_date": "2025-02-01"
+    },
+    "Grenada": {
+        "iso": "GRD",
+        "city": "St. George's",
+        "max": 31.3,
+        "max_date": "2025-06-29",
+        "min": 21.4,
+        "min_date": "2025-04-20"
+    },
+    "Guatemala": {
+        "iso": "GTM",
+        "city": "Guatemala City",
+        "max": 47.4,
+        "max_date": "2025-09-28",
+        "min": -14.1,
+        "min_date": "2025-07-22"
+    },
+    "Guinea": {
+        "iso": "GIN",
+        "city": "Conakry",
+        "max": 22.7,
+        "max_date": "2025-10-24",
+        "min": -2.7,
+        "min_date": "2025-08-11"
+    },
+    "Guinea-Bissau": {
+        "iso": "GNB",
+        "city": "Bissau",
+        "max": 43.4,
+        "max_date": "2025-06-02",
+        "min": 17.6,
+        "min_date": "2025-07-25"
+    },
+    "Guyana": {
+        "iso": "GUY",
+        "city": "Georgetown",
+        "max": 32.6,
+        "max_date": "2025-12-28",
+        "min": -6.2,
+        "min_date": "2025-08-04"
+    },
+    "Haiti": {
+        "iso": "HTI",
+        "city": "Port-au-Prince",
+        "max": 41.3,
+        "max_date": "2025-10-08",
+        "min": 1.9,
+        "min_date": "2025-07-22"
+    },
+    "Holy See": {
+        "iso": "VAT",
+        "city": "Vatican City",
+        "max": 36.3,
+        "max_date": "2025-07-18",
+        "min": 10.7,
+        "min_date": "2025-07-06"
+    },
+    "Honduras": {
+        "iso": "HND",
+        "city": "Tegucigalpa",
+        "max": 20.9,
+        "max_date": "2025-01-05",
+        "min": 13.8,
+        "min_date": "2025-01-03"
+    },
+    "Hungary": {
+        "iso": "HUN",
+        "city": "Budapest",
+        "max": 47.2,
+        "max_date": "2025-06-03",
+        "min": 23.9,
+        "min_date": "2025-12-14"
+    },
+    "Iceland": {
+        "iso": "ISL",
+        "city": "Reykjav\u00edk",
+        "max": 46.5,
+        "max_date": "2025-04-12",
+        "min": -12.1,
+        "min_date": "2025-02-16"
+    },
+    "India": {
+        "iso": "IND",
+        "city": "Mumbai",
+        "max": 32.0,
+        "max_date": "2025-02-11",
+        "min": 3.7,
+        "min_date": "2025-09-12"
+    },
+    "Indonesia": {
+        "iso": "IDN",
+        "city": "Jakarta",
+        "max": 24.0,
+        "max_date": "2025-04-30",
+        "min": 20.5,
+        "min_date": "2025-04-08"
+    },
+    "Iran": {
+        "iso": "IRN",
+        "city": "Tehran",
+        "max": 46.5,
+        "max_date": "2025-06-09",
+        "min": -7.2,
+        "min_date": "2025-01-10"
+    },
+    "Iraq": {
+        "iso": "IRQ",
+        "city": "Baghdad",
+        "max": 23.0,
+        "max_date": "2025-12-30",
+        "min": -14.1,
+        "min_date": "2025-06-17"
+    },
+    "Ireland": {
+        "iso": "IRL",
+        "city": "Dublin",
+        "max": 46.7,
+        "max_date": "2025-06-22",
+        "min": 11.1,
+        "min_date": "2025-06-11"
+    },
+    "Israel": {
+        "iso": "ISR",
+        "city": "Jerusalem",
+        "max": 36.0,
+        "max_date": "2025-10-25",
+        "min": -14.1,
+        "min_date": "2025-09-20"
+    },
+    "Italy": {
+        "iso": "ITA",
+        "city": "Rome",
+        "max": 28.4,
+        "max_date": "2025-06-16",
+        "min": 10.7,
+        "min_date": "2025-10-13"
+    },
+    "Jamaica": {
+        "iso": "JAM",
+        "city": "Kingston",
+        "max": 39.5,
+        "max_date": "2025-11-03",
+        "min": 16.5,
+        "min_date": "2025-06-01"
+    },
+    "Japan": {
+        "iso": "JPN",
+        "city": "Tokyo",
+        "max": 26.1,
+        "max_date": "2025-05-26",
+        "min": -10.0,
+        "min_date": "2025-05-12"
+    },
+    "Jordan": {
+        "iso": "JOR",
+        "city": "Amman",
+        "max": 28.5,
+        "max_date": "2025-01-01",
+        "min": 23.7,
+        "min_date": "2025-04-29"
+    },
+    "Kazakhstan": {
+        "iso": "KAZ",
+        "city": "Almaty",
+        "max": 37.8,
+        "max_date": "2025-09-15",
+        "min": -0.0,
+        "min_date": "2025-04-19"
+    },
+    "Kenya": {
+        "iso": "KEN",
+        "city": "Nairobi",
+        "max": 41.0,
+        "max_date": "2025-09-01",
+        "min": 1.1,
+        "min_date": "2025-02-06"
+    },
+    "Kiribati": {
+        "iso": "KIR",
+        "city": "South Tarawa",
+        "max": 46.1,
+        "max_date": "2025-09-13",
+        "min": 9.9,
+        "min_date": "2025-04-21"
+    },
+    "Kuwait": {
+        "iso": "KWT",
+        "city": "Kuwait City",
+        "max": 39.3,
+        "max_date": "2025-03-19",
+        "min": -12.2,
+        "min_date": "2025-06-08"
+    },
+    "Kyrgyzstan": {
+        "iso": "KGZ",
+        "city": "Bishkek",
+        "max": 28.3,
+        "max_date": "2025-12-22",
+        "min": 22.4,
+        "min_date": "2025-05-21"
+    },
+    "Laos": {
+        "iso": "LAO",
+        "city": "Vientiane",
+        "max": 43.6,
+        "max_date": "2025-05-15",
+        "min": -4.7,
+        "min_date": "2025-11-05"
+    },
+    "Latvia": {
+        "iso": "LVA",
+        "city": "Riga",
+        "max": 44.1,
+        "max_date": "2025-11-10",
+        "min": -8.5,
+        "min_date": "2025-01-10"
+    },
+    "Lebanon": {
+        "iso": "LBN",
+        "city": "Beirut",
+        "max": 28.8,
+        "max_date": "2025-05-17",
+        "min": 5.3,
+        "min_date": "2025-07-22"
+    },
+    "Lesotho": {
+        "iso": "LSO",
+        "city": "Maseru",
+        "max": 39.7,
+        "max_date": "2025-05-15",
+        "min": 2.7,
+        "min_date": "2025-05-01"
+    },
+    "Liberia": {
+        "iso": "LBR",
+        "city": "Monrovia",
+        "max": 33.0,
+        "max_date": "2025-04-09",
+        "min": 5.8,
+        "min_date": "2025-06-25"
+    },
+    "Libya": {
+        "iso": "LBY",
+        "city": "Tripoli",
+        "max": 41.5,
+        "max_date": "2025-04-22",
+        "min": 8.9,
+        "min_date": "2025-03-01"
+    },
+    "Liechtenstein": {
+        "iso": "LIE",
+        "city": "Vaduz",
+        "max": 38.6,
+        "max_date": "2025-10-11",
+        "min": 1.8,
+        "min_date": "2025-05-25"
+    },
+    "Lithuania": {
+        "iso": "LTU",
+        "city": "Vilnius",
+        "max": 36.7,
+        "max_date": "2025-07-23",
+        "min": -2.9,
+        "min_date": "2025-08-01"
+    },
+    "Luxembourg": {
+        "iso": "LUX",
+        "city": "Luxembourg City",
+        "max": 42.4,
+        "max_date": "2025-02-10",
+        "min": -1.5,
+        "min_date": "2025-03-29"
+    },
+    "Madagascar": {
+        "iso": "MDG",
+        "city": "Antananarivo",
+        "max": 37.9,
+        "max_date": "2025-11-04",
+        "min": 20.4,
+        "min_date": "2025-04-05"
+    },
+    "Malawi": {
+        "iso": "MWI",
+        "city": "Lilongwe",
+        "max": 42.5,
+        "max_date": "2025-02-18",
+        "min": 20.6,
+        "min_date": "2025-12-23"
+    },
+    "Malaysia": {
+        "iso": "MYS",
+        "city": "Kuala Lumpur",
+        "max": 39.4,
+        "max_date": "2025-05-11",
+        "min": 18.5,
+        "min_date": "2025-11-14"
+    },
+    "Maldives": {
+        "iso": "MDV",
+        "city": "Mal\u00e9",
+        "max": 34.5,
+        "max_date": "2025-06-05",
+        "min": 13.5,
+        "min_date": "2025-10-06"
+    },
+    "Mali": {
+        "iso": "MLI",
+        "city": "Bamako",
+        "max": 44.5,
+        "max_date": "2025-03-31",
+        "min": 9.2,
+        "min_date": "2025-10-08"
+    },
+    "Malta": {
+        "iso": "MLT",
+        "city": "Birkirkara",
+        "max": 34.6,
+        "max_date": "2025-03-21",
+        "min": 0.7,
+        "min_date": "2025-10-07"
+    },
+    "Marshall Islands": {
+        "iso": "MHL",
+        "city": "Majuro",
+        "max": 46.6,
+        "max_date": "2025-05-12",
+        "min": -9.5,
+        "min_date": "2025-06-02"
+    },
+    "Mauritania": {
+        "iso": "MRT",
+        "city": "Nouakchott",
+        "max": 42.2,
+        "max_date": "2025-08-12",
+        "min": -11.7,
+        "min_date": "2025-06-25"
+    },
+    "Mauritius": {
+        "iso": "MUS",
+        "city": "Port Louis",
+        "max": 35.8,
+        "max_date": "2025-11-13",
+        "min": 22.0,
+        "min_date": "2025-11-16"
+    },
+    "Mexico": {
+        "iso": "MEX",
+        "city": "Mexico City",
+        "max": 29.9,
+        "max_date": "2025-11-25",
+        "min": 13.7,
+        "min_date": "2025-02-16"
+    },
+    "Micronesia": {
+        "iso": "FSM",
+        "city": "Palikir",
+        "max": 28.0,
+        "max_date": "2025-02-01",
+        "min": 5.5,
+        "min_date": "2025-03-28"
+    },
+    "Moldova": {
+        "iso": "MDA",
+        "city": "Chi\u0219in\u0103u",
+        "max": 20.9,
+        "max_date": "2025-12-24",
+        "min": 10.3,
+        "min_date": "2025-04-05"
+    },
+    "Monaco": {
+        "iso": "MCO",
+        "city": "Monaco",
+        "max": 44.6,
+        "max_date": "2025-10-25",
+        "min": 4.9,
+        "min_date": "2025-07-15"
+    },
+    "Mongolia": {
+        "iso": "MNG",
+        "city": "Ulaanbaatar",
+        "max": 37.8,
+        "max_date": "2025-06-06",
+        "min": -14.5,
+        "min_date": "2025-04-12"
+    },
+    "Montenegro": {
+        "iso": "MNE",
+        "city": "Podgorica",
+        "max": 44.7,
+        "max_date": "2025-06-01",
+        "min": 21.7,
+        "min_date": "2025-12-03"
+    },
+    "Morocco": {
+        "iso": "MAR",
+        "city": "Casablanca",
+        "max": 33.4,
+        "max_date": "2025-09-18",
+        "min": -13.5,
+        "min_date": "2025-05-17"
+    },
+    "Mozambique": {
+        "iso": "MOZ",
+        "city": "Maputo",
+        "max": 29.9,
+        "max_date": "2025-03-19",
+        "min": -9.4,
+        "min_date": "2025-03-04"
+    },
+    "Myanmar (Burma)": {
+        "iso": "MMR",
+        "city": "Yangon",
+        "max": 27.9,
+        "max_date": "2025-04-17",
+        "min": 12.5,
+        "min_date": "2025-07-30"
+    },
+    "Namibia": {
+        "iso": "NAM",
+        "city": "Windhoek",
+        "max": 47.4,
+        "max_date": "2025-10-30",
+        "min": -7.0,
+        "min_date": "2025-02-26"
+    },
+    "Nauru": {
+        "iso": "NRU",
+        "city": "Yaren",
+        "max": 47.1,
+        "max_date": "2025-05-20",
+        "min": 17.3,
+        "min_date": "2025-02-03"
+    },
+    "Nepal": {
+        "iso": "NPL",
+        "city": "Kathmandu",
+        "max": 20.9,
+        "max_date": "2025-04-06",
+        "min": 10.7,
+        "min_date": "2025-01-25"
+    },
+    "Netherlands": {
+        "iso": "NLD",
+        "city": "Amsterdam",
+        "max": 36.3,
+        "max_date": "2025-11-11",
+        "min": 1.5,
+        "min_date": "2025-08-06"
+    },
+    "New Zealand": {
+        "iso": "NZL",
+        "city": "Auckland",
+        "max": 35.6,
+        "max_date": "2025-06-04",
+        "min": 0.3,
+        "min_date": "2025-04-22"
+    },
+    "Nicaragua": {
+        "iso": "NIC",
+        "city": "Managua",
+        "max": 26.9,
+        "max_date": "2025-09-13",
+        "min": -14.4,
+        "min_date": "2025-12-17"
+    },
+    "Niger": {
+        "iso": "NER",
+        "city": "Niamey",
+        "max": 36.6,
+        "max_date": "2025-07-09",
+        "min": -0.6,
+        "min_date": "2025-05-04"
+    },
+    "Nigeria": {
+        "iso": "NGA",
+        "city": "Lagos",
+        "max": 28.1,
+        "max_date": "2025-11-20",
+        "min": -4.9,
+        "min_date": "2025-01-02"
+    },
+    "North Korea": {
+        "iso": "PRK",
+        "city": "Pyongyang",
+        "max": 45.3,
+        "max_date": "2025-07-25",
+        "min": 3.5,
+        "min_date": "2025-03-22"
+    },
+    "North Macedonia": {
+        "iso": "MKD",
+        "city": "Skopje",
+        "max": 26.9,
+        "max_date": "2025-10-15",
+        "min": -3.3,
+        "min_date": "2025-02-03"
+    },
+    "Norway": {
+        "iso": "NOR",
+        "city": "Oslo",
+        "max": 24.4,
+        "max_date": "2025-03-17",
+        "min": 13.5,
+        "min_date": "2025-04-21"
+    },
+    "Oman": {
+        "iso": "OMN",
+        "city": "Muscat",
+        "max": 38.6,
+        "max_date": "2025-03-31",
+        "min": -3.2,
+        "min_date": "2025-03-01"
+    },
+    "Pakistan": {
+        "iso": "PAK",
+        "city": "Karachi",
+        "max": 41.8,
+        "max_date": "2025-02-25",
+        "min": 17.4,
+        "min_date": "2025-02-10"
+    },
+    "Palau": {
+        "iso": "PLW",
+        "city": "Ngerulmud",
+        "max": 37.5,
+        "max_date": "2025-11-24",
+        "min": 17.2,
+        "min_date": "2025-02-28"
+    },
+    "Palestine State": {
+        "iso": "PSE",
+        "city": "Gaza City",
+        "max": 35.8,
+        "max_date": "2025-03-25",
+        "min": -5.1,
+        "min_date": "2025-05-31"
+    },
+    "Panama": {
+        "iso": "PAN",
+        "city": "Panama City",
+        "max": 46.4,
+        "max_date": "2025-12-21",
+        "min": 4.2,
+        "min_date": "2025-10-13"
+    },
+    "Papua New Guinea": {
+        "iso": "PNG",
+        "city": "Port Moresby",
+        "max": 36.9,
+        "max_date": "2025-09-09",
+        "min": 7.4,
+        "min_date": "2025-02-24"
+    },
+    "Paraguay": {
+        "iso": "PRY",
+        "city": "Asunci\u00f3n",
+        "max": 47.2,
+        "max_date": "2025-12-05",
+        "min": 7.0,
+        "min_date": "2025-02-25"
+    },
+    "Peru": {
+        "iso": "PER",
+        "city": "Lima",
+        "max": 47.1,
+        "max_date": "2025-03-08",
+        "min": -8.1,
+        "min_date": "2025-04-01"
+    },
+    "Philippines": {
+        "iso": "PHL",
+        "city": "Quezon City",
+        "max": 35.1,
+        "max_date": "2025-10-03",
+        "min": -7.1,
+        "min_date": "2025-11-27"
+    },
+    "Poland": {
+        "iso": "POL",
+        "city": "Warsaw",
+        "max": 42.5,
+        "max_date": "2025-05-19",
+        "min": -11.8,
+        "min_date": "2025-05-29"
+    },
+    "Portugal": {
+        "iso": "PRT",
+        "city": "Lisbon",
+        "max": 22.9,
+        "max_date": "2025-07-12",
+        "min": 21.6,
+        "min_date": "2025-05-21"
+    },
+    "Qatar": {
+        "iso": "QAT",
+        "city": "Doha",
+        "max": 26.0,
+        "max_date": "2025-08-06",
+        "min": -3.9,
+        "min_date": "2025-05-06"
+    },
+    "Romania": {
+        "iso": "ROU",
+        "city": "Bucharest",
+        "max": 35.7,
+        "max_date": "2025-01-08",
+        "min": -1.8,
+        "min_date": "2025-06-07"
+    },
+    "Russia": {
+        "iso": "RUS",
+        "city": "Moscow",
+        "max": 39.0,
+        "max_date": "2025-02-20",
+        "min": 0.1,
+        "min_date": "2025-02-07"
+    },
+    "Rwanda": {
+        "iso": "RWA",
+        "city": "Kigali",
+        "max": 43.7,
+        "max_date": "2025-12-09",
+        "min": 24.6,
+        "min_date": "2025-05-08"
+    },
+    "Saint Kitts and Nevis": {
+        "iso": "KNA",
+        "city": "Basseterre",
+        "max": 33.7,
+        "max_date": "2025-09-06",
+        "min": -12.9,
+        "min_date": "2025-03-20"
+    },
+    "Saint Lucia": {
+        "iso": "LCA",
+        "city": "Castries",
+        "max": 35.1,
+        "max_date": "2025-11-27",
+        "min": 0.0,
+        "min_date": "2025-11-17"
+    },
+    "Saint Vincent and the Grenadines": {
+        "iso": "VCT",
+        "city": "Kingstown",
+        "max": 31.1,
+        "max_date": "2025-08-22",
+        "min": -11.6,
+        "min_date": "2025-06-09"
+    },
+    "Samoa": {
+        "iso": "WSM",
+        "city": "Apia",
+        "max": 44.9,
+        "max_date": "2025-01-27",
+        "min": 18.4,
+        "min_date": "2025-06-06"
+    },
+    "San Marino": {
+        "iso": "SMR",
+        "city": "San Marino",
+        "max": 35.4,
+        "max_date": "2025-09-28",
+        "min": 12.5,
+        "min_date": "2025-05-24"
+    },
+    "Sao Tome and Principe": {
+        "iso": "STP",
+        "city": "S\u00e3o Tom\u00e9",
+        "max": 26.4,
+        "max_date": "2025-11-01",
+        "min": -7.2,
+        "min_date": "2025-11-25"
+    },
+    "Saudi Arabia": {
+        "iso": "SAU",
+        "city": "Riyadh",
+        "max": 30.3,
+        "max_date": "2025-02-25",
+        "min": 10.4,
+        "min_date": "2025-01-28"
+    },
+    "Senegal": {
+        "iso": "SEN",
+        "city": "Dakar",
+        "max": 23.6,
+        "max_date": "2025-03-11",
+        "min": 13.3,
+        "min_date": "2025-07-28"
+    },
+    "Serbia": {
+        "iso": "SRB",
+        "city": "Belgrade",
+        "max": 26.8,
+        "max_date": "2025-08-31",
+        "min": 19.5,
+        "min_date": "2025-06-01"
+    },
+    "Seychelles": {
+        "iso": "SYC",
+        "city": "Victoria",
+        "max": 46.7,
+        "max_date": "2025-10-13",
+        "min": 9.7,
+        "min_date": "2025-01-21"
+    },
+    "Sierra Leone": {
+        "iso": "SLE",
+        "city": "Freetown",
+        "max": 43.8,
+        "max_date": "2025-12-25",
+        "min": 19.9,
+        "min_date": "2025-10-25"
+    },
+    "Singapore": {
+        "iso": "SGP",
+        "city": "Singapore",
+        "max": 47.0,
+        "max_date": "2025-11-18",
+        "min": -12.6,
+        "min_date": "2025-03-04"
+    },
+    "Slovakia": {
+        "iso": "SVK",
+        "city": "Bratislava",
+        "max": 25.6,
+        "max_date": "2025-11-12",
+        "min": -6.1,
+        "min_date": "2025-04-03"
+    },
+    "Slovenia": {
+        "iso": "SVN",
+        "city": "Ljubljana",
+        "max": 47.9,
+        "max_date": "2025-02-25",
+        "min": 23.5,
+        "min_date": "2025-11-21"
+    },
+    "Solomon Islands": {
+        "iso": "SLB",
+        "city": "Honiara",
+        "max": 24.1,
+        "max_date": "2025-11-30",
+        "min": 18.2,
+        "min_date": "2025-08-14"
+    },
+    "Somalia": {
+        "iso": "SOM",
+        "city": "Mogadishu",
+        "max": 38.9,
+        "max_date": "2025-05-08",
+        "min": -10.2,
+        "min_date": "2025-12-28"
+    },
+    "South Africa": {
+        "iso": "ZAF",
+        "city": "Johannesburg",
+        "max": 41.1,
+        "max_date": "2025-02-28",
+        "min": -6.1,
+        "min_date": "2025-08-02"
+    },
+    "South Korea": {
+        "iso": "KOR",
+        "city": "Seoul",
+        "max": 27.5,
+        "max_date": "2025-10-03",
+        "min": -10.5,
+        "min_date": "2025-11-10"
+    },
+    "South Sudan": {
+        "iso": "SSD",
+        "city": "Juba",
+        "max": 35.9,
+        "max_date": "2025-10-30",
+        "min": -4.0,
+        "min_date": "2025-02-04"
+    },
+    "Spain": {
+        "iso": "ESP",
+        "city": "Madrid",
+        "max": 35.6,
+        "max_date": "2025-02-16",
+        "min": 1.8,
+        "min_date": "2025-06-20"
+    },
+    "Sri Lanka": {
+        "iso": "LKA",
+        "city": "Colombo",
+        "max": 31.8,
+        "max_date": "2025-02-06",
+        "min": 9.7,
+        "min_date": "2025-02-23"
+    },
+    "Sudan": {
+        "iso": "SDN",
+        "city": "Khartoum",
+        "max": 25.0,
+        "max_date": "2025-12-01",
+        "min": 7.5,
+        "min_date": "2025-07-18"
+    },
+    "Suriname": {
+        "iso": "SUR",
+        "city": "Paramaribo",
+        "max": 21.5,
+        "max_date": "2025-09-04",
+        "min": 6.2,
+        "min_date": "2025-09-20"
+    },
+    "Sweden": {
+        "iso": "SWE",
+        "city": "Stockholm",
+        "max": 37.0,
+        "max_date": "2025-02-26",
+        "min": -5.9,
+        "min_date": "2025-04-04"
+    },
+    "Switzerland": {
+        "iso": "CHE",
+        "city": "Z\u00fcrich",
+        "max": 32.9,
+        "max_date": "2025-02-02",
+        "min": 9.9,
+        "min_date": "2025-02-09"
+    },
+    "Syria": {
+        "iso": "SYR",
+        "city": "Damascus",
+        "max": 43.8,
+        "max_date": "2025-01-17",
+        "min": 11.8,
+        "min_date": "2025-05-13"
+    },
+    "Tajikistan": {
+        "iso": "TJK",
+        "city": "Dushanbe",
+        "max": 24.7,
+        "max_date": "2025-10-02",
+        "min": 11.7,
+        "min_date": "2025-07-15"
+    },
+    "Tanzania": {
+        "iso": "TZA",
+        "city": "Dar es Salaam",
+        "max": 32.5,
+        "max_date": "2025-12-06",
+        "min": 18.4,
+        "min_date": "2025-09-15"
+    },
+    "Thailand": {
+        "iso": "THA",
+        "city": "Bangkok",
+        "max": 36.5,
+        "max_date": "2025-09-15",
+        "min": 6.7,
+        "min_date": "2025-09-11"
+    },
+    "Timor-Leste": {
+        "iso": "TLS",
+        "city": "Dili",
+        "max": 30.3,
+        "max_date": "2025-06-20",
+        "min": 13.9,
+        "min_date": "2025-11-26"
+    },
+    "Togo": {
+        "iso": "TGO",
+        "city": "Lom\u00e9",
+        "max": 36.5,
+        "max_date": "2025-08-08",
+        "min": 1.6,
+        "min_date": "2025-11-22"
+    },
+    "Tonga": {
+        "iso": "TON",
+        "city": "Nuku\u02bbalofa",
+        "max": 42.0,
+        "max_date": "2025-07-19",
+        "min": -10.3,
+        "min_date": "2025-09-21"
+    },
+    "Trinidad and Tobago": {
+        "iso": "TTO",
+        "city": "Chaguanas",
+        "max": 46.2,
+        "max_date": "2025-01-07",
+        "min": 14.9,
+        "min_date": "2025-11-30"
+    },
+    "Tunisia": {
+        "iso": "TUN",
+        "city": "Tunis",
+        "max": 40.8,
+        "max_date": "2025-01-09",
+        "min": 7.0,
+        "min_date": "2025-03-26"
+    },
+    "Turkey": {
+        "iso": "TUR",
+        "city": "Istanbul",
+        "max": 31.4,
+        "max_date": "2025-12-04",
+        "min": -12.1,
+        "min_date": "2025-04-09"
+    },
+    "Turkmenistan": {
+        "iso": "TKM",
+        "city": "Ashgabat",
+        "max": 35.3,
+        "max_date": "2025-08-30",
+        "min": -4.7,
+        "min_date": "2025-08-23"
+    },
+    "Tuvalu": {
+        "iso": "TUV",
+        "city": "Funafuti",
+        "max": 40.0,
+        "max_date": "2025-07-22",
+        "min": 7.9,
+        "min_date": "2025-08-26"
+    },
+    "Uganda": {
+        "iso": "UGA",
+        "city": "Kampala",
+        "max": 27.3,
+        "max_date": "2025-07-28",
+        "min": -4.0,
+        "min_date": "2025-02-08"
+    },
+    "Ukraine": {
+        "iso": "UKR",
+        "city": "Kyiv",
+        "max": 41.0,
+        "max_date": "2025-01-29",
+        "min": 21.5,
+        "min_date": "2025-02-09"
+    },
+    "United Arab Emirates": {
+        "iso": "ARE",
+        "city": "Dubai",
+        "max": 45.3,
+        "max_date": "2025-02-16",
+        "min": -3.3,
+        "min_date": "2025-08-15"
+    },
+    "United Kingdom": {
+        "iso": "GBR",
+        "city": "London",
+        "max": 39.9,
+        "max_date": "2025-04-14",
+        "min": -12.9,
+        "min_date": "2025-03-16"
+    },
+    "United States": {
+        "iso": "USA",
+        "city": "New York City",
+        "max": 31.2,
+        "max_date": "2025-05-03",
+        "min": 0.1,
+        "min_date": "2025-11-17"
+    },
+    "Uruguay": {
+        "iso": "URY",
+        "city": "Montevideo",
+        "max": 33.2,
+        "max_date": "2025-02-04",
+        "min": 2.7,
+        "min_date": "2025-07-14"
+    },
+    "Uzbekistan": {
+        "iso": "UZB",
+        "city": "Tashkent",
+        "max": 39.9,
+        "max_date": "2025-09-12",
+        "min": 18.9,
+        "min_date": "2025-02-19"
+    },
+    "Vanuatu": {
+        "iso": "VUT",
+        "city": "Port Vila",
+        "max": 34.7,
+        "max_date": "2025-12-28",
+        "min": 14.1,
+        "min_date": "2025-08-10"
+    },
+    "Venezuela": {
+        "iso": "VEN",
+        "city": "Caracas",
+        "max": 45.7,
+        "max_date": "2025-09-29",
+        "min": 23.5,
+        "min_date": "2025-03-02"
+    },
+    "Vietnam": {
+        "iso": "VNM",
+        "city": "Ho Chi Minh City",
+        "max": 27.0,
+        "max_date": "2025-05-05",
+        "min": 6.0,
+        "min_date": "2025-02-20"
+    },
+    "Yemen": {
+        "iso": "YEM",
+        "city": "Sana'a",
+        "max": 24.4,
+        "max_date": "2025-05-30",
+        "min": -10.8,
+        "min_date": "2025-04-25"
+    },
+    "Zambia": {
+        "iso": "ZMB",
+        "city": "Lusaka",
+        "max": 38.4,
+        "max_date": "2025-07-13",
+        "min": 4.9,
+        "min_date": "2025-05-17"
+    },
+    "Zimbabwe": {
+        "iso": "ZWE",
+        "city": "Harare",
+        "max": 27.7,
+        "max_date": "2025-04-11",
+        "min": -1.5,
+        "min_date": "2025-04-13"
+    }
+}
