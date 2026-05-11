@@ -2,4 +2,3 @@ streamlit
 pydeck
 requests
 pycountry
-geopy
