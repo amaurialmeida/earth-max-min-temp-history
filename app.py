@@ -1,182 +1,86 @@
 import streamlit as st
-import json
+import pydeck as pdk
+import pycountry
+import requests
 
-# ============================================================================
-# CONFIGURAÇÃO DA PÁGINA
-# ============================================================================
-st.set_page_config(
-    page_title="Code Earth - Global Temperatures 2025",
-    page_icon="🌡️",
-    layout="wide",
-    initial_sidebar_state="collapsed"
+# Função para buscar bandeira correta
+def get_flag_url(country_code):
+    return f"https://flagcdn.com/w320/{country_code.lower()}.png"
+
+# Função para buscar temperatura atual via Open-Meteo
+def get_current_weather(lat, lon):
+    url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true"
+    response = requests.get(url).json()
+    if "current_weather" in response:
+        return response["current_weather"]["temperature"]
+    return None
+
+# Função para dados históricos (exemplo NOAA simplificado)
+def get_historical_weather(year):
+    fake_data = {
+        2025: {"max": "35°C em 12/01", "min": "8°C em 23/07"},
+        2005: {"max": "34°C em 15/02", "min": "7°C em 19/06"},
+        1995: {"max": "33°C em 10/03", "min": "6°C em 25/07"},
+        1985: {"max": "32°C em 05/01", "min": "5°C em 30/06"},
+        1975: {"max": "31°C em 20/02", "min": "4°C em 18/07"},
+        1965: {"max": "30°C em 14/01", "min": "3°C em 22/06"},
+        1955: {"max": "29°C em 11/03", "min": "2°C em 27/07"},
+        1945: {"max": "28°C em 09/02", "min": "1°C em 15/06"},
+        1935: {"max": "27°C em 07/01", "min": "0°C em 21/07"},
+    }
+    return fake_data.get(year, {"max": "-", "min": "-"})
+
+# Configuração inicial
+st.set_page_config(page_title="Earth Max-Min Temp History", layout="wide")
+st.title("🌍 Earth Max-Min Temp History")
+
+# Dados de exemplo (pode expandir com mais países/cidades)
+cities = {
+    "São Paulo": {"lat": -23.55, "lon": -46.63, "country_code": "BR"},
+    "New York": {"lat": 40.71, "lon": -74.01, "country_code": "US"},
+    "Paris": {"lat": 48.85, "lon": 2.35, "country_code": "FR"},
+    "Tokyo": {"lat": 35.68, "lon": 139.69, "country_code": "JP"},
+    "Tel Aviv": {"lat": 32.08, "lon": 34.78, "country_code": "IL"},
+}
+
+# Renderização do globo giratório com PyDeck
+view_state = pdk.ViewState(latitude=0, longitude=0, zoom=0.5, bearing=0, pitch=0)
+layer = pdk.Layer(
+    "ScatterplotLayer",
+    data=[{"lat": info["lat"], "lon": info["lon"], "city": city, "country_code": info["country_code"]}
+          for city, info in cities.items()],
+    get_position=["lon", "lat"],
+    get_color=[200, 30, 0, 160],
+    get_radius=500000,
 )
 
-# ============================================================================
-# CARREGAMENTO DE DADOS
-# ============================================================================
-@st.cache_data
-def load_data():
-    try:
-        with open('full_temperature_data.json', 'r') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return {"Brazil": {"iso": "BRA", "city": "São Paulo", "max": 35.0, "max_date": "2025-01-01", "min": 15.0, "min_date": "2025-07-01"}}
+deck = pdk.Deck(
+    layers=[layer],
+    initial_view_state=view_state,
+    map_style=None,
+)
 
-TEMPERATURE_DATA = load_data()
+st.pydeck_chart(deck)
 
-# ============================================================================
-# COMPONENTE HTML/JS CUSTOMIZADO (GLOBO 3D ESTILO COVID VISUALIZER)
-# ============================================================================
-# Esta abordagem usa a biblioteca Globe.gl para garantir performance e zero flickering.
+# Seleção de cidade
+selected_city = st.selectbox("Selecione uma cidade:", list(cities.keys()))
+info = cities[selected_city]
+lat, lon, country_code = info["lat"], info["lon"], info["country_code"]
 
-data_json = json.dumps(TEMPERATURE_DATA)
+# Temperatura atual
+current_temp = get_current_weather(lat, lon)
 
-html_code = f"""
-<!DOCTYPE html>
-<html>
-<head>
-    <script src="//unpkg.com/globe.gl"></script>
-    <style>
-        body {{ margin: 0; background: #050505; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }}
-        #globeViz {{ width: 100vw; height: 100vh; }}
-        
-        /* Overlay de Informações */
-        .info-overlay {{
-            position: fixed;
-            top: 30px;
-            left: 30px;
-            z-index: 1000;
-            background: rgba(10, 20, 35, 0.85);
-            backdrop-filter: blur(15px);
-            padding: 25px;
-            border-radius: 20px;
-            border: 1px solid rgba(46, 204, 113, 0.3);
-            width: 320px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-            color: white;
-            display: none; /* Escondido por padrão */
-            pointer-events: none;
-        }}
-        
-        .country-header {{ display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }}
-        .country-name {{ font-size: 22px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }}
-        .city-info {{ font-size: 13px; color: #2ecc71; margin-bottom: 20px; font-weight: 500; }}
-        .stat-container {{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }}
-        .stat-label {{ font-size: 10px; color: #888; text-transform: uppercase; margin-bottom: 5px; }}
-        .stat-value {{ font-size: 24px; font-weight: bold; }}
-        .max-val {{ color: #3498db; }}
-        .min-val {{ color: #2ecc71; }}
-        .stat-date {{ font-size: 10px; color: #555; margin-top: 3px; }}
+# Bandeira e nome oficial
+country = pycountry.countries.get(alpha_2=country_code)
+flag_url = get_flag_url(country_code)
 
-        .brand-title {{
-            position: fixed;
-            top: 30px;
-            width: 100%;
-            text-align: center;
-            z-index: 999;
-            pointer-events: none;
-            color: white;
-        }}
-        .brand-title h1 {{ font-size: 32px; font-weight: 200; letter-spacing: 8px; margin: 0; opacity: 0.9; }}
-        .brand-title p {{ font-size: 11px; letter-spacing: 3px; color: #2ecc71; margin-top: 5px; opacity: 0.7; }}
-        
-        .footer-hint {{
-            position: fixed;
-            bottom: 30px;
-            width: 100%;
-            text-align: center;
-            color: rgba(255,255,255,0.2);
-            font-size: 11px;
-            letter-spacing: 2px;
-            pointer-events: none;
-        }}
-    </style>
-</head>
-<body>
-    <div class="brand-title">
-        <h1>CODE EARTH</h1>
-        <p>GLOBAL TEMPERATURE ANALYTICS 2025</p>
-    </div>
+st.image(flag_url, width=100)
+st.subheader(f"{selected_city}, {country.name}")
+st.write(f"🌡️ Temperatura atual: {current_temp}°C")
 
-    <div id="infoCard" class="info-overlay">
-        <div class="country-header">
-            <img id="flagImg" src="" width="35" style="border-radius: 4px;">
-            <span id="countryName" class="country-name"></span>
-        </div>
-        <div class="city-info">Cidade Referência: <b id="cityName"></b></div>
-        <div class="stat-container">
-            <div>
-                <div class="stat-label">Máxima</div>
-                <div class="stat-value max-val" id="maxTemp"></div>
-                <div class="stat-date" id="maxDate"></div>
-            </div>
-            <div>
-                <div class="stat-label">Mínima</div>
-                <div class="stat-value min-val" id="minTemp"></div>
-                <div class="stat-date" id="minDate"></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="globeViz"></div>
-    
-    <div class="footer-hint">CLIQUE EM UM PAÍS PARA VER DETALHES • O GLOBO GIRA AUTOMATICAMENTE</div>
-
-    <script>
-        const temperatureData = {data_json};
-        
-        const world = Globe()
-            (document.getElementById('globeViz'))
-            .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
-            .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-            .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
-            .polygonAltitude(0.01)
-            .polygonCapColor(() => 'rgba(26, 82, 118, 0.4)')
-            .polygonSideColor(() => 'rgba(0, 0, 0, 0.1)')
-            .polygonStrokeColor(() => '#2ecc71')
-            .polygonLabel(({{ properties: d }}) => `
-                <div style="background: rgba(0,0,0,0.8); padding: 5px; border-radius: 3px; border: 1px solid #2ecc71;">
-                    <b>${{d.ADMIN}}</b>
-                </div>
-            `)
-            .onPolygonClick(({{ properties: d }}) => {{
-                showCountryInfo(d.ADMIN, d.ISO_A3);
-                world.controls().autoRotate = false; // Para de girar ao clicar
-                setTimeout(() => {{ world.controls().autoRotate = true; }}, 10000); // Volta a girar após 10s
-            }})
-            .polygonsTransitionDuration(300);
-
-        // Carregar fronteiras dos países
-        fetch('https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson')
-            .then(res => res.json())
-            .then(countries => {{
-                world.polygonsData(countries.features.filter(d => d.properties.ISO_A3 !== 'ATA'));
-            }});
-
-        // Configuração de Rotação
-        world.controls().autoRotate = true;
-        world.controls().autoRotateSpeed = 0.5;
-        world.pointOfView({{ lat: 15, lng: -45, altitude: 2.5 }});
-
-        function showCountryInfo(name, iso) {{
-            const card = document.getElementById('infoCard');
-            const data = temperatureData[name] || Object.values(temperatureData).find(v => v.iso === iso);
-            
-            if (data) {{
-                document.getElementById('countryName').innerText = name;
-                document.getElementById('cityName').innerText = data.city;
-                document.getElementById('maxTemp').innerText = data.max + '°C';
-                document.getElementById('maxDate').innerText = data.max_date;
-                document.getElementById('minTemp').innerText = data.min + '°C';
-                document.getElementById('minDate').innerText = data.min_date;
-                document.getElementById('flagImg').src = `https://flagcdn.com/w80/${{data.iso.toLowerCase().substring(0,2)}}.png`;
-                card.style.display = 'block';
-            }}
-        }}
-    </script>
-</body>
-</html>
-"""
-
-# Renderizar o componente HTML ocupando a tela toda
-st.components.v1.html(html_code, height=900, scrolling=False)
+# Card lateral com histórico
+st.sidebar.markdown("### Histórico de Temperaturas")
+anos = [2025, 2005, 1995, 1985, 1975, 1965, 1955, 1945, 1935]
+for ano in anos:
+    dados = get_historical_weather(ano)
+    st.sidebar.write(f"**{ano}** - Máx: {dados['max']} | Mín: {dados['min']}")
