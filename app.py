@@ -22,7 +22,10 @@ def load_data():
         with open('full_temperature_data.json', 'r') as f:
             return json.load(f)
     except FileNotFoundError:
-        return {}
+        # Fallback caso o arquivo não exista
+        return {
+            "Brazil": {"iso": "BRA", "city": "São Paulo", "max": 35.0, "max_date": "2025-01-01", "min": 15.0, "min_date": "2025-07-01"}
+        }
 
 TEMPERATURE_DATA = load_data()
 
@@ -143,7 +146,7 @@ st.markdown("""
         opacity: 0.7;
     }
     
-    /* Custom Scrollbar para o Sidebar */
+    /* Custom Sidebar */
     [data-testid="stSidebar"] {
         background-color: #0a0a0a;
         border-right: 1px solid #1a1a1a;
@@ -163,11 +166,10 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Sidebar para seleção (Simula a interação do mapa)
+# Sidebar para seleção
 with st.sidebar:
     st.markdown("<h2 style='color:#2ecc71; font-size:18px;'>PAÍSES</h2>", unsafe_allow_html=True)
     country_list = sorted(list(TEMPERATURE_DATA.keys()))
-    # Default para Brasil se disponível
     default_idx = country_list.index("Brazil") if "Brazil" in country_list else 0
     selected_country = st.selectbox("Selecione para ver detalhes:", options=country_list, index=default_idx)
 
@@ -218,10 +220,10 @@ fig = go.Figure(go.Choropleth(
     colorscale=[
         [0, '#0a1a2f'],    # Azul escuro profundo
         [0.5, '#1a5276'],  # Azul médio
-        [1, '#2ecc71']     # Verde (como solicitado)
+        [1, '#2ecc71']     # Verde
     ],
     showscale=False,
-    marker_line_color='rgba(255,255,255,0.15)', # Fronteiras sutis
+    marker_line_color='rgba(255,255,255,0.15)',
     marker_line_width=0.5,
     hoverinfo='text',
 ))
@@ -236,15 +238,15 @@ fig.update_geos(
     showcoastlines=True,
     coastlinecolor="rgba(255,255,255,0.1)",
     bgcolor="#050505",
-    projection_rotation=dict(lon=-45, lat=15, roll=0) # Focar inicialmente nas Américas
+    projection_rotation=dict(lon=-45, lat=15, roll=0)
 )
 
 fig.update_layout(
-    height=900,
+    height=850,
     margin={"r":0,"t":0,"l":0,"b":0},
     paper_bgcolor="#050505",
     plot_bgcolor="#050505",
-    dragmode="rotate",
+    # Removido dragmode="rotate" que causava erro em algumas versões do Plotly
 )
 
 # Renderizar o mapa
