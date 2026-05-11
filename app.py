@@ -2,7 +2,6 @@ import streamlit as st
 import json
 import pandas as pd
 import plotly.graph_objects as go
-import time
 
 # ============================================================================
 # CONFIGURAÇÃO DA PÁGINA
@@ -34,8 +33,6 @@ TEMPERATURE_DATA = load_data()
 # ============================================================================
 if 'selected_country' not in st.session_state:
     st.session_state.selected_country = "Brazil"
-if 'rotation' not in st.session_state:
-    st.session_state.rotation = 0
 
 # ============================================================================
 # CSS PERSONALIZADO (ESTILO COVID VISUALIZER)
@@ -63,6 +60,7 @@ st.markdown("""
         border: 1px solid rgba(46, 204, 113, 0.3);
         width: 320px;
         box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        pointer-events: none;
     }
     
     .country-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
@@ -128,7 +126,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ============================================================================
-# GLOBO 3D
+# GLOBO 3D COM ROTAÇÃO AUTOMÁTICA (VIA PLOTLY ANIMATION)
 # ============================================================================
 
 df_map = pd.DataFrame([
@@ -147,9 +145,7 @@ fig = go.Figure(go.Choropleth(
     hoverinfo='text'
 ))
 
-# Rotação automática: incrementa a longitude a cada re-run
-st.session_state.rotation = (st.session_state.rotation + 0.5) % 360
-
+# Configuração do Globo
 fig.update_geos(
     projection_type="orthographic",
     showcountries=True,
@@ -159,7 +155,7 @@ fig.update_geos(
     showcoastlines=True,
     coastlinecolor="rgba(255,255,255,0.1)",
     bgcolor="#050505",
-    projection_rotation=dict(lon=st.session_state.rotation, lat=15, roll=0)
+    projection_rotation=dict(lon=0, lat=15, roll=0)
 )
 
 fig.update_layout(
@@ -170,8 +166,32 @@ fig.update_layout(
     clickmode='event+select'
 )
 
+# Adicionar animação de rotação nativa do Plotly (sem st.rerun)
+# Isso faz o globo girar suavemente no navegador
+fig.layout.updatemenus = [
+    dict(
+        type="buttons",
+        showactive=False,
+        x=0.1, y=0.1,
+        buttons=[
+            dict(
+                label="Play",
+                method="animate",
+                args=[None, dict(frame=dict(duration=50, redraw=True), fromcurrent=True, mode="immediate")]
+            )
+        ]
+    )
+]
+
+# Criar frames para a rotação (360 graus)
+frames = [
+    go.Frame(layout=dict(geo_projection_rotation=dict(lon=i, lat=15, roll=0)))
+    for i in range(0, 360, 2)
+]
+fig.frames = frames
+
 # Renderizar o mapa
-# Usamos o parâmetro key para evitar conflitos de estado e on_select para capturar o clique
+# O on_select="rerun" permite capturar o clique, mas sem o loop infinito de st.rerun()
 event = st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False}, on_select="rerun", key="globe_map")
 
 # Lógica de Clique
@@ -184,10 +204,21 @@ if event and "selection" in event and "points" in event["selection"] and len(eve
 # Instrução no rodapé
 st.markdown("""
 <div style="position: fixed; bottom: 30px; width: 100%; text-align: center; color: rgba(255,255,255,0.2); font-size: 11px; letter-spacing: 2px; pointer-events: none;">
-    CLIQUE EM UM PAÍS PARA VER DETALHES • O GLOBO GIRA AUTOMATICAMENTE
+    CLIQUE EM UM PAÍS PARA VER DETALHES • ARRASTE PARA GIRAR O GLOBO
 </div>
 """, unsafe_allow_html=True)
 
-# Forçar atualização para a rotação automática (loop suave)
-time.sleep(0.1)
-st.rerun()
+# Injetar JavaScript para clicar no botão "Play" automaticamente ao carregar
+# Isso inicia a rotação sem intervenção do usuário e sem flickering
+st.components.v1.html("""
+<script>
+    setTimeout(function() {
+        var buttons = window.parent.document.querySelectorAll('rect.updatemenu-button-bg');
+        if (buttons.length > 0) {
+            buttons[0].dispatchEvent(new MouseEvent('click', {bubbles: true}));
+            // Esconder o botão Play para manter o visual limpo
+            buttons[0].parentElement.style.display = 'none';
+        }
+    }, 1500);
+</script>
+""", height=0)
