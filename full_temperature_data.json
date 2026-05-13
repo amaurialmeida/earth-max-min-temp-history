@@ -22,7 +22,7 @@
     "Bolivia": {"iso": "BOL", "city": "Santa Cruz de la Sierra", "max": 28.7, "max_date": "2025-09-24", "min": 12.3, "min_date": "2025-09-26"},
     "Bosnia and Herzegovina": {"iso": "BIH", "city": "Sarajevo", "max": 34.7, "max_date": "2025-10-01", "min": 9.2, "min_date": "2025-01-16"},
     "Botswana": {"iso": "BWA", "city": "Gaborone", "max": 37.8, "max_date": "2025-10-16", "min": -5.2, "min_date": "2025-01-28"},
-    "Brazil": {"iso": "BRA", "city": "Sao Paulo", "max": 22.9, "max_date": "2025-01-27", "min": -0.2, "min_date": "2025-06-06"},
+    "Brazil": {"iso": "BRA", "city": "Sao Paulo", "max": 36.9, "max_date": "2025-01-27", "min": 10.2, "min_date": "2025-06-06"},
     "Brunei": {"iso": "BRN", "city": "Bandar Seri Begawan", "max": 31.9, "max_date": "2025-05-13", "min": 23.1, "min_date": "2025-08-31"},
     "Bulgaria": {"iso": "BGR", "city": "Sofia", "max": 29.8, "max_date": "2025-04-08", "min": -7.9, "min_date": "2025-03-14"},
     "Burkina Faso": {"iso": "BFA", "city": "Ouagadougou", "max": 37.1, "max_date": "2025-11-04", "min": 12.4, "min_date": "2025-07-14"},
