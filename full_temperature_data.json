@@ -1677,9 +1677,9 @@
     "iso": "USA",
     "city": "Sacramento",
     "max": 39.4,
-    "max_date": null,
+    "max_date": "2025-08-22",
     "min": -1.7,
-    "min_date": null,
+    "min_date": "2025-01-20",
     "iso2": "US"
   },
   "Uruguay": {
